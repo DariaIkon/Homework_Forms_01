@@ -9,9 +9,9 @@
 
 <body>
     <form action="https://webhook.site/782b19fc-3193-4b8d-81dd-8bffb8899e46" method="POST">
-        <label for="name">Имя<input type="text" id="name"></label>
+        <label for="name">Имя<input type="text" id="name" name="name" required></label>
         <br>
-        <label for="last_name">Фамилия<input type="text" id="last_name"></label>
+        <label for="last_name">Фамилия<input type="text" id="last_name" name="last_name" required></label>
         <br>
         <label for="country">Страна
             <select name="country" id="country" required>
@@ -124,12 +124,12 @@
         </label>
         <br>
         <label for="phone">Телефон
-            <select name="phone" id="phone">
-                <option value="+375">+375</option>
-                <option value="+380">+380</option>
-                <option value="+7" selected>+7</option>
+            <select name="code_phone" id="phone">
+                <option name="code_phone" value="+375">+375</option>
+                <option name="code_phone" value="+380">+380</option>
+                <option name="code_phone" value="+7" selected>+7</option>
             </select>
-            <input type="tel">
+            <input type="tel" name="phone">
         </label>
         <br>
         <label for="info">Обо мне
@@ -140,15 +140,15 @@
         <div>
             <div>Какой поисковой системой вы пользуетесь?</div>
             <label for="google">Google
-                <input type="checkbox" name="search_system" id="google" value="google">
+                <input type="checkbox" name="search_system" id="google" value="google_value">
             </label>
             <br>
             <label for="yandex">Yandex
-                <input type="checkbox" name="search_system" id="yandex" value="yandex">
+                <input type="checkbox" name="search_system" id="yandex" value="yandex_value">
             </label>
             <br>
             <label for="yahoo">Yahoo
-                <input type="checkbox" name="search_system" id="yahoo" value="yahoo">
+                <input type="checkbox" name="search_system" id="yahoo" value="yahoo_value">
             </label>
         </div>
         <br>
@@ -157,7 +157,7 @@
         </label>
         <br>
         <label for="repeat_pswrd">Повторите пароль
-            <input type="repeat_password" name="repeat_password" id="repeat_pswrd" maxlength="10" required>
+            <input type="password" name="repeat_password" id="repeat_pswrd" maxlength="10" required>
         </label>
         <br>
         <label for="agree">
